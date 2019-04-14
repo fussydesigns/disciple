@@ -1,0 +1,35 @@
+-let nav = 'bg-black white pv2 ph3 no-underline';
+
+// <Logo txt='' />
+Logo
+  virtual(if='{ opts.img }')
+    a(href='/').fl
+      img(src='{ opts.img }' alt='{ opts.txt }')
+  virtual(if='{ !opts.img }')
+    a(href='/').fl.no-underline
+      h1.mv0 { opts.txt }
+  .cb
+
+// <Navigation class_ul='' class_li='' />
+Navigation
+  yield/
+  ul(class='{ opts.class_ul }' ref='bg').bg-black-50.bg-trans
+    li.dn-ns.tr
+      button(onclick='{ toggle }' if='{ opts.overlay }').w2.h2.bw0.bg-black.white.pointer ✕
+    li(each='{ i in list }' class='{ opts.class_li }')
+      a(href='#/{ i }' class=nav) { i }
+  script.
+    let ui = this;
+    ui.open = true;
+    ui.list = opts.list;
+    ui.toggle = toggle;
+
+    function toggle(event) {
+      let bg = ui.refs.bg;
+      swap(bg, 'dn');
+      swap(bg, 'bg-trans');
+    }
+
+    function swap(el, cl) {
+      el.classList.toggle(cl);
+    }

@@ -1,0 +1,30 @@
+-let primary = 'bg-red white tc';
+
+// <Fibonacci />
+Fibonacci
+  ul.list.pl0.mv0
+    li.pv2(
+      class=primary
+      if='{ x !== 0 }'
+      each='{ x in steps }')
+      | { x }
+    li
+      button(onclick='{ add }').h3.w-100
+        | +
+  script.
+    let ui = this;
+    ui.steps = opts.list || [0, 1];
+    ui.add = add;
+
+    function add(event) {
+      let s = ui.steps;
+      let l = s.length;
+      let x = s[l - 2] + s[l - 1];
+      s.push(x);
+      ui.update();
+      scroll(event.target);
+    }
+
+    function scroll(to) {
+      to.scrollIntoView(false);
+    }

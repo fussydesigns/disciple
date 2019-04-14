@@ -1,0 +1,24 @@
+{
+  "name": "disciple",
+  "version": "0.0.3",
+  "scripts": {
+    "start": "npm run brunch:dev",
+    "brunch:dev": "node ./node_modules/brunch/bin/brunch watch --server",
+    "test": "node ./node_modules/brunch/bin/brunch test"
+  },
+  "author": "Brock Atkinson",
+  "private": true,
+  "devDependencies": {
+    "auto-reload-brunch": "^2.7.1",
+    "brunch": "^2.10.16",
+    "hmr-brunch": "^0.1.1",
+    "pugjs-brunch": "^2.11.3",
+    "riot-brunch": "^0.1.1",
+    "tachyons": "^4.11.1"
+  },
+  "dependencies": {
+    "riot": "^3.13.2",
+    "riot-parents": "^1.0.2",
+    "riot-route": "^3.1.4"
+  }
+}

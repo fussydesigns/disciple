@@ -1,0 +1,34 @@
+-let full = 'h-100 w-100';
+-let modal_bg = 'fixed top-0 left-0';
+-let topnav = full + ' ' + modal_bg + ' dn db-ns relative-ns list pl0 mv0 tr-ns center';
+-let topnav_item = 'dib-ns ml2-ns mv3 mv0-ns pv1 pv2-ns mv1-ns center tc';
+
+// <App />
+App
+  header
+    nav.db.dt-ns.h-100.w-100
+      Logo(txt='{ this.app }').db.dtc-ns.v-mid.pa3
+      Navigation(class_ul=topnav class_li=topnav_item list='{ menu }' overlay='1').db.dtc-ns.v-mid.pa3-ns
+        button(onclick='{ toggle }').dn-ns.h2.w-100.ttu.tracked.b menu
+  Router
+    .bg-green
+      Route(path='')
+        Txt(txt='Welcome to { parents(2).app }')
+        List(list='{ parents(2).menu }' class_ul='list pl0 mv0 tc' class_li='pv2 mt2')
+          a(href='#/{ l }') { l }
+      Route(path='about')
+        Txt(txt='{ parents(2).app } is an app')
+      Route(path='fibonacci')
+        Fibonacci
+      Route(path='saver')
+        Fibonacci(list='{ parents(2).fibb }')
+  script.
+    let ui = this;
+    ui.menu = ['about', 'fibonacci', 'saver'];
+    ui.fibb = [0, 1];
+    ui.on('mount', init);
+
+    function init() {
+      console.log('Welcome to', opts.app);
+      ui.update({ app: opts.app });
+    }
