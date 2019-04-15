@@ -17,7 +17,7 @@ exports.config =
     styles:
       tachyons: ['css/tachyons.css']
   plugins:
-    plug:
+    pug:
       pretty: false
     riot:
       extension: 'riot'
