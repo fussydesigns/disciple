@@ -20,6 +20,7 @@ exports.config =
         req('rucksack-css', { autoprefixer: true })
         req('postcss-import')
         req('immutable-css')
+        req('postcss-hocus')
         req('pixrem')
         req('cssnano')
       ]
