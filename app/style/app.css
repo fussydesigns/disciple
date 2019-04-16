@@ -1,4 +1,5 @@
 @import 'tachyons';
+@import './_framework';
 
 /**
 /* app.css
@@ -6,10 +7,11 @@
 /**/
 
 @alias {
-  c: color;
   bg: background;
   bgc: background-color;
   bgi: background-image;
+  c: color;
+  d: display;
 
   ff: font-family;
   fs: font-size;
@@ -21,6 +23,5 @@
 }
 
 p {
-  c: rgba(#f00, .75);
-  c: gold;
+  bgc: rgba(#f00, .75);
 }

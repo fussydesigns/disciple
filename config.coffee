@@ -1,4 +1,4 @@
-req = (plugin) -> require(plugin)()
+req = (plugin, opts) -> require(plugin)(opts)
 
 exports.config =
   files:
@@ -17,8 +17,9 @@ exports.config =
   plugins:
     postcss:
       processors: [
-        req('rucksack-css')
+        req('rucksack-css', { autoprefixer: true })
         req('postcss-import')
+        req('immutable-css')
         req('cssnano')
       ]
     pug:
