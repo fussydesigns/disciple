@@ -22,6 +22,7 @@ exports.config =
         req('immutable-css')
         req('postcss-hocus')
         req('pixrem')
+        req('postcss-insert')
         req('cssnano')
       ]
     pug:

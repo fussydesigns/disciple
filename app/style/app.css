@@ -26,8 +26,17 @@ body {
   ff: sans-serif;
 }
 
+.height {
+  h: 2rem;
+}
+
+.regular {
+  lh: 2rem;
+}
+
 p {
   bgc: rgba(#fff, .75);
-  h: 2rem;
-  lh: 2rem;
+  @insert .regular;
+  @insert .w-100;
+  @insert .db;
 }
