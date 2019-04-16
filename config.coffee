@@ -1,3 +1,5 @@
+req = (plugin) -> require(plugin)()
+
 exports.config =
   files:
     javascripts:
@@ -12,11 +14,13 @@ exports.config =
     port: 80
     noPushState: true
     stripSlashes: true
-  npm:
-    enabled: true
-    styles:
-      tachyons: ['css/tachyons.css']
   plugins:
+    postcss:
+      processors: [
+        req('rucksack-css')
+        req('postcss-import')
+        req('cssnano')
+      ]
     pug:
       pretty: false
     riot:

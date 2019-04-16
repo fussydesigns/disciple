@@ -1,8 +1,26 @@
+@import 'tachyons';
+
 /**
 /* app.css
 /*
 /**/
 
+@alias {
+  c: color;
+  bg: background;
+  bgc: background-color;
+  bgi: background-image;
+
+  ff: font-family;
+  fs: font-size;
+  lh: line-height;
+  ls: letter-spacing;
+
+  h: height;
+  w: width;
+}
+
 p {
-  color: gold;
+  c: rgba(#f00, .75);
+  c: gold;
 }
