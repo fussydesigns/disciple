@@ -25,6 +25,7 @@ exports.config =
         req('postcss-hocus')
         req('pixrem')
         req('postcss-insert')
+        req('postcss-uncss', { html: ['public/index.html'], ignore: [] })
         req('cssnano')
       ]
     pug:

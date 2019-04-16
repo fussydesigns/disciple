@@ -32,9 +32,14 @@ body {
   lh: $height;
 }
 
+.h {
+  h: $height;
+}
+
 p {
   bgc: rgba(#fff, .75);
   @insert .regular;
   @insert .w-100;
   @insert .db;
+  @insert .h;
 }
