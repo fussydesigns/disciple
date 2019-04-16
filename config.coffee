@@ -15,9 +15,10 @@ exports.config =
     noPushState: true
     stripSlashes: true
   plugins:
-    terser:
-      mangle: true
-      compress: true
+    gzip:
+      paths:
+        javascript: '.'
+        stylesheet: '.'
     postcss:
       processors: [
         req('rucksack-css', { autoprefixer: true })
@@ -37,3 +38,6 @@ exports.config =
       extension: 'riot'
       pattern: /\.riot$/
       template: 'pug'
+    terser:
+      mangle: true
+      compress: true
