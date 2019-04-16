@@ -22,16 +22,14 @@
   w: width;
 }
 
+$height: 2rem;
+
 body {
   ff: sans-serif;
 }
 
-.height {
-  h: 2rem;
-}
-
 .regular {
-  lh: 2rem;
+  lh: $height;
 }
 
 p {

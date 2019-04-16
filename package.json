@@ -1,6 +1,6 @@
 {
   "name": "disciple",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "scripts": {
     "start": "npm run brunch:dev",
     "brunch:dev": "node ./node_modules/brunch/bin/brunch watch --server",
@@ -19,6 +19,7 @@
     "postcss-hocus": "^1.0.0",
     "postcss-import": "^12.0.1",
     "postcss-insert": "^1.0.0",
+    "precss": "^4.0.0",
     "pugjs-brunch": "^2.11.3",
     "riot-brunch": "^0.1.1",
     "rucksack-css": "^1.0.2",
