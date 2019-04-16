@@ -38,6 +38,8 @@ exports.config =
       extension: 'riot'
       pattern: /\.riot$/
       template: 'pug'
+    signature:
+      file: 'app.signature'
     terser:
       mangle: true
       compress: true
