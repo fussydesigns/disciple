@@ -28,4 +28,6 @@ body {
 
 p {
   bgc: rgba(#fff, .75);
+  h: 2rem;
+  lh: 2rem;
 }
