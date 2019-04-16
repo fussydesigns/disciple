@@ -19,14 +19,14 @@ exports.config =
       processors: [
         req('rucksack-css', { autoprefixer: true })
         req('postcss-import')
-        req('perfectionist')
         req('precss')
         req('immutable-css')
         req('postcss-hocus')
         req('pixrem')
         req('postcss-insert')
         req('postcss-uncss', { html: ['public/index.html'], ignore: [] })
-        req('cssnano')
+        req('perfectionist', { indentSize: 2 })
+        # req('cssnano')
       ]
     pug:
       pretty: false

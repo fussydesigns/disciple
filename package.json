@@ -1,6 +1,6 @@
 {
   "name": "disciple",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "scripts": {
     "start": "npm run brunch:dev",
     "brunch:dev": "node ./node_modules/brunch/bin/brunch watch --server",
