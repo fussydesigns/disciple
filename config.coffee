@@ -19,6 +19,7 @@ exports.config =
       processors: [
         req('rucksack-css', { autoprefixer: true })
         req('postcss-import')
+        req('perfectionist')
         req('precss')
         req('immutable-css')
         req('postcss-hocus')
