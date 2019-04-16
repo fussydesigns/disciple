@@ -15,6 +15,9 @@ exports.config =
     noPushState: true
     stripSlashes: true
   plugins:
+    terser:
+      mangle: true
+      compress: true
     postcss:
       processors: [
         req('rucksack-css', { autoprefixer: true })
