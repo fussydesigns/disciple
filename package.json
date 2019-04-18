@@ -1,6 +1,6 @@
 {
   "name": "disciple",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "scripts": {
     "start": "npm run brunch:dev",
     "build": "npm run brunch:build",
@@ -31,7 +31,6 @@
   "main": "public/index.js",
   "devDependencies": {
     "auto-reload-brunch": "^2.7.1",
-    "autoprefixer": "^9.5.1",
     "brunch": "^2.10.16",
     "brunch-signature": "^1.0.1",
     "cssnano": "^4.1.10",

@@ -11,7 +11,7 @@ exports.config =
         'app.css'
   server:
     hostname: '0.0.0.0'
-    port: 80
+    port: 8080
     noPushState: true
     stripSlashes: true
   plugins:
@@ -23,11 +23,11 @@ exports.config =
       processors: [
         req('rucksack-css', { autoprefixer: true })
         req('postcss-import')
+        req('immutable-css', { strict: false })
         req('precss')
-        req('immutable-css')
-        req('postcss-hocus')
         req('pixrem')
         req('postcss-insert')
+        req('postcss-hocus')
         req('postcss-uncss', { html: ['public/index.html'], ignore: [] })
         req('perfectionist', { indentSize: 2 })
         # req('cssnano')
