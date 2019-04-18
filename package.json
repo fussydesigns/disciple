@@ -12,8 +12,23 @@
     "brunch:live": "node ./node_modules/brunch/bin/brunch watch --server --production",
     "test": "node ./node_modules/brunch/bin/brunch test"
   },
-  "author": "Brock Atkinson",
-  "private": true,
+  "author": {
+    "name": "Brock Atkinson"
+  },
+  "maintainers": [
+    {
+      "name": "fussy",
+      "email": "fussydesigns@outlook.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "//github.com/fussydesigns/disciple"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "license": "MIT",
+  "main": "public/index.js",
   "devDependencies": {
     "auto-reload-brunch": "^2.7.1",
     "autoprefixer": "^9.5.1",
